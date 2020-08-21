@@ -20,7 +20,7 @@ bot.once('ready', () => {
   vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
   vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
   mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
-  vengirLogsChannel = vengirServer.channels.cache.get('745059977651290162') // #jd
+  vengirLogsChannel = vengirServer.channels.cache.get('718205075490603118') // #jd
 
   console.log(`Logged in as ${bot.user.username}`);
 });
