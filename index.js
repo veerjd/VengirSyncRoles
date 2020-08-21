@@ -15,19 +15,12 @@ let vengirLogsChannel
 //       EVENT ON LOGIN
 // --------------------------------------
 bot.once('ready', () => {
-  // vengirServer = bot.guilds.cache.get('717820602844577943') // Vengir Server
-  // mainServer = bot.guilds.cache.get('283436219780825088') // Polytopia Server
-  // vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
-  // vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
-  // mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
-  // vengirLogsChannel = vengirServer.channels.cache.get('745059977651290162') // #jd
-
-  vengirServer = bot.guilds.cache.get('581872879386492929') // Vengir Server
-  mainServer = bot.guilds.cache.get('447883341463814144') // Polytopia Server
-  vengirVengir = vengirServer.roles.cache.get('654164855250616330') // Swordsman
-  vengirNotVengir = vengirServer.roles.cache.get('654164652741099540') // Swordless Swine
-  mainVengir = mainServer.roles.cache.get('728548767539658782') // Vengir
-  vengirLogsChannel = vengirServer.channels.cache.get('660136237725777955') // #jd
+  vengirServer = bot.guilds.cache.get('717820602844577943') // Vengir Server
+  mainServer = bot.guilds.cache.get('283436219780825088') // Polytopia Server
+  vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
+  vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
+  mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
+  vengirLogsChannel = vengirServer.channels.cache.get('745059977651290162') // #jd
 
   console.log(`Logged in as ${bot.user.username}`);
 });
