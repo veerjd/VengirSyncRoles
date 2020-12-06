@@ -1,7 +1,7 @@
 {
   "name": "polycalculator",
   "version": "1.0.0",
-  "description": "Discord bot, CLI calculator for Polytopia",
+  "description": "Discord bot, managing advisors and ",
   "main": "index.js",
   "dependencies": {
     "discord.js": "12.1.1",
@@ -9,20 +9,10 @@
     "eslint": "6.8.0",
     "pg": "7.18.2"
   },
-  "devDependencies": {
-    "@babel/cli": "7.8.4",
-    "@babel/core": "7.8.4",
-    "@babel/node": "7.8.4",
-    "@babel/preset-env": "7.8.4"
-  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node server/index.js",
-    "api": "nodemon server/index.js",
-    "bot": "nodemon bot/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "log": "heroku logs -t -a=polycalculator -d=worker",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "bot": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "jd (alphaSeahorse)",
