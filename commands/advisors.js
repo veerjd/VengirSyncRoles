@@ -23,8 +23,7 @@ module.exports = {
     const { rows } = await db.query(sql, values)
 
     if (!rows[0]) {
-      // const actualAdvisors = message.guild.roles.cache.get('618158885169004555') // @People giving advice
-      const actualAdvisors = message.guild.roles.cache.get('654165794040840193') // @bots
+      const actualAdvisors = message.guild.roles.cache.get('618158885169004555') // @People giving advice
       replyData.content.push([argsStr + '\n<@&' + actualAdvisors.id + '>', {}])
       return replyData
     }

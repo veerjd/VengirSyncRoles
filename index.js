@@ -33,12 +33,11 @@ bot.once('ready', () => {
   // crawServer = bot.guilds.cache.get('492753802450173987') // Crawfish Server
   crawServer = bot.guilds.cache.get('581872879386492929') // PolyCalculator Server
 
-  // vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
-  // vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
-  // mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
-  // vengirLogsChannel = vengirServer.channels.cache.get('718205075490603118') // #jd
-  // advisors = crawServer.roles.cache.get('780148610390163486') // Craw's pingable advisor role
-  advisors = crawServer.roles.cache.get('654165794040840193') // PolyCalc's bots role
+  vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
+  vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
+  mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
+  vengirLogsChannel = vengirServer.channels.cache.get('718205075490603118') // #jd
+  advisors = crawServer.roles.cache.get('780148610390163486') // Craw's pingable advisor role
 
   console.log(`Logged in as ${bot.user.username}`);
 });
