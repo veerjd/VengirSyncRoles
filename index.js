@@ -28,10 +28,9 @@ for (const file of commandFiles) {
 //       EVENT ON LOGIN
 // --------------------------------------
 bot.once('ready', () => {
-  // vengirServer = bot.guilds.cache.get('717820602844577943') // Vengir Server
-  // mainServer = bot.guilds.cache.get('283436219780825088') // Polytopia Server
-  // crawServer = bot.guilds.cache.get('492753802450173987') // Crawfish Server
-  crawServer = bot.guilds.cache.get('581872879386492929') // PolyCalculator Server
+  vengirServer = bot.guilds.cache.get('717820602844577943') // Vengir Server
+  mainServer = bot.guilds.cache.get('283436219780825088') // Polytopia Server
+  crawServer = bot.guilds.cache.get('492753802450173987') // Crawfish Server
 
   vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
   vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
@@ -182,7 +181,7 @@ bot.on('guildMemberUpdate', (oldMainMember, newMainMember) => {
 
 process.on('unhandledRejection', (code) => {
 
-  console.log(`unhandledRejection: ${code}`)
+  console.log(`unhandledRejection: ${code.stack}`)
 })
 
 bot.login(process.env.TOKEN);
