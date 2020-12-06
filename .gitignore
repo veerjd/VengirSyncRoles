@@ -8,7 +8,9 @@ firebase-debug.log*
 /img
 /dist
 /client
+.vscode
 .env
+test.js
 *.csv
 **/test*
 **/__pycache__/
