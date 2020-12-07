@@ -56,7 +56,7 @@ module.exports = {
       }
     })
 
-    replyData.content.push([`The ${message.mentions.users.size} players you specified were set as Advisors in the ${message.mentions.channels.size} games/channels!`, {}])
+    replyData.content.push([`The ${message.mentions.users.size} players you specified were set as Advisors in the ${channels.length} games/channels!`, {}])
 
     return replyData
   }
