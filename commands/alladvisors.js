@@ -18,12 +18,8 @@ module.exports = {
     const sql = 'SELECT * FROM advisors'
     const { rows } = await db.query(sql)
 
-    if (!rows[0]) {
-      const actualAdvisors = message.guild.roles.cache.get(process.env.FULLADVISOR) // @People giving advice
-      // replyData.content.push([argsStr, {}])
-      replyData.content.push([actualAdvisors, {}])
-      return replyData
-    }
+    if (!rows[0])
+      throw 'No channels have advisors'
 
     const pings = []
     rows.forEach(dbChannel => {
