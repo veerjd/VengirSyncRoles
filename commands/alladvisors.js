@@ -30,11 +30,13 @@ module.exports = {
       const members = []
       if (dbChannel.advisors)
         dbChannel.advisors.forEach(advisor => {
-          members.push(message.guild.members.cache.get(advisor))
+          const member = message.guild.members.cache.get(advisor)
+          members.push(member.username)
         })
 
       const channel = message.client.channels.cache.get(dbChannel.channel_id)
-      pings.push(`${channel}:\n${members.length === 0 ? 'None' : members.join(', ')}`)
+      if (members.length > 0)
+        pings.push(`${channel}:\n${members.join(', ')}`)
     })
 
     // replyData.content.push([argsStr, {}])
