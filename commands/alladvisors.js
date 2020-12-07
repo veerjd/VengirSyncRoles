@@ -31,7 +31,7 @@ module.exports = {
       if (dbChannel.advisors)
         dbChannel.advisors.forEach(advisor => {
           const member = message.guild.members.cache.get(advisor)
-          members.push(member.username)
+          members.push(member.user.username)
         })
 
       const channel = message.client.channels.cache.get(dbChannel.channel_id)
