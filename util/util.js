@@ -57,7 +57,7 @@ module.exports.advisorPing = async function (message, crawServer, advisors) {
     deleteContent: false,
     footer: undefined
   }
-  // advisors = { id: '654164915032031252' }
+
   if (message.mentions.roles.get(advisors.id)) {
     const reply = await advisorCommand.execute(message, message.cleanContent, replyData)
     if (reply) {
@@ -89,14 +89,14 @@ module.exports.transferMessage = function (message, crawServer) {
     return true
 }
 
-const crawAnnouncements = '747198636495994910'
+const crawAnnouncements = process.env.CRAWANNOUNCEMENT
 
 const announcementChannels = [
-  '447986488152686594', // server-announcements
-  '488572469666512896', // league-updates
-  '722958026885169163', // league-stats
-  '688810283900469279', // draft-selection
-  '689873462118187017' // free-agent-picks
+  process.env.SERVERANNOUNCEMENT, // server-announcements
+  process.env.LEAGUEUPDATES, // league-updates
+  process.env.LEAGUESTATS, // league-stats
+  process.env.DRAFTSELECTION, // draft-selection
+  process.env.FREEAGENTPICKS // free-agent-picks
 ]
 
-const pickFatCount = '714204768289030214'
+const pickFatCount = process.env.PICKFATCOUNT

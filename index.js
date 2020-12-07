@@ -28,15 +28,15 @@ for (const file of commandFiles) {
 //       EVENT ON LOGIN
 // --------------------------------------
 bot.once('ready', () => {
-  vengirServer = bot.guilds.cache.get('717820602844577943') // Vengir Server
-  mainServer = bot.guilds.cache.get('283436219780825088') // Polytopia Server
-  crawServer = bot.guilds.cache.get('492753802450173987') // Crawfish Server
+  vengirServer = bot.guilds.cache.get(process.env.VENGIRSERVER) // Vengir Server
+  mainServer = bot.guilds.cache.get(process.env.POLYTOPIASERVER) // Polytopia Server
+  crawServer = bot.guilds.cache.get(process.env.CRAWFISHSERVER) // Crawfish Server
 
-  vengirVengir = vengirServer.roles.cache.get('717825983209799741') // Swordsman
-  vengirNotVengir = vengirServer.roles.cache.get('717826077048700930') // Swordless Swine
-  mainVengir = mainServer.roles.cache.get('403739147036262402') // Vengir
-  vengirLogsChannel = vengirServer.channels.cache.get('718205075490603118') // #jd
-  advisors = crawServer.roles.cache.get('780148610390163486') // Craw's pingable advisor role
+  vengirVengir = vengirServer.roles.cache.get(process.env.VENGIRVENGIR) // Swordsman
+  vengirNotVengir = vengirServer.roles.cache.get(process.env.VENGIRNOTVENGIR) // Swordless Swine
+  mainVengir = mainServer.roles.cache.get(process.env.POLYTOPIAVENGIR) // Vengir
+  vengirLogsChannel = vengirServer.channels.cache.get(process.env.VENGIRLOGS) // #jd
+  advisors = crawServer.roles.cache.get(process.env.EMPTYADVISOR) // Craw's pingable advisor role
 
   console.log(`Logged in as ${bot.user.username}`);
 });
@@ -122,12 +122,12 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //  EVENT WHEN A NEW MEMBER JOINS VENGIR
 // ---------------------------------------
 bot.on('guildMemberAdd', newMember => {
-  if (newMember.guild.id !== '717820602844577943')
+  if (newMember.guild.id !== process.env.VENGIRSERVER)
     return
 
   const mainMember = mainServer.member(newMember.user.id)
 
-  if (!mainMember)// || mainMember.user.id !== '217385992837922819') // If the Vengir member isn't in Main
+  if (!mainMember)
     return vengirLogsChannel.send(`**${newMember.user.username}** isn't in Main Polytopia :astonished:`)
 
 
