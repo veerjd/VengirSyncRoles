@@ -27,7 +27,7 @@ module.exports = {
     const dbData = []
     let channels = [message.channel]
     if (message.mentions.channels.size > 0)
-      channels = message.mentions.channels
+      channels = message.mentions.channels.array()
 
     channels.forEach(channel => {
       const data = {
