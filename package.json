@@ -1,7 +1,7 @@
 {
   "name": "polycalculator",
   "version": "1.0.0",
-  "description": "Discord bot, managing advisors and ",
+  "description": "Discord bot, managing advisors and other Crawfish-centered stuff",
   "main": "index.js",
   "dependencies": {
     "discord.js": "12.1.1",
