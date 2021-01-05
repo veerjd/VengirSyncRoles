@@ -12,7 +12,7 @@ module.exports = {
   },
   forceNoDelete: true,
   category: 'Staff',
-  permsAllowed: ['MANAGE_MESSAGES'],
+  permsAllowed: ['VIEW_CHANNEL'],
   usersAllowed: ['217385992837922819'],
   execute: async function (message, argsStr, replyData) {
     if (message.mentions.users.size < 1)
