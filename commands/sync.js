@@ -3,10 +3,10 @@ module.exports = {
   description: 'Sync the perms of all channels of a category by category id',
   aliases: ['sc'],
   shortUsage(prefix) {
-    return `${prefix}synccat 576549951480397844`
+    return `${prefix}sc 576549951480397844`
   },
   longUsage(prefix) {
-    return `${prefix}synccat 576549951480397844`
+    return `${prefix}sync 576549951480397844`
   },
   forceNoDelete: true,
   category: 'hidden',
