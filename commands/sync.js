@@ -1,6 +1,6 @@
 module.exports = {
   name: 'sync',
-  description: 'Sync the perms of all channels of a category by category id',
+  description: 'Provide a category id, channel id or channel ping and it\'ll sync with the other',
   aliases: ['sc'],
   shortUsage(prefix) {
     return `${prefix}sc 576549951480397844`
