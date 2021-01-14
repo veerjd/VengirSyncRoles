@@ -9,7 +9,7 @@ module.exports.buildEmbed = function (data) {
     embed.setDescription(data.description)
   if (data.fields)
     data.fields.forEach(el => {
-      embed.addField(el.name, el.value.join('\n'))
+      embed.addField(el.name, el.value)
     })
 
   return embed
