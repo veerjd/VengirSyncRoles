@@ -10,7 +10,7 @@ module.exports = {
   },
   forceNoDelete: true,
   category: 'hidden',
-  permsAllowed: ['MANAGE_MESSAGES'],
+  permsAllowed: ['MANAGE_CHANNELS'],
   usersAllowed: ['217385992837922819'],
   execute: async function (message, argsStr, replyData) {
     if (argsStr.length < 2)
